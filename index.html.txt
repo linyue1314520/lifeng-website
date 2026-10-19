@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>利峰數碼有限公司 | LIFENG DIGITAL LIMITED - 專業相機鏡頭專家</title>
+    <style>
+        /* 全局樣式設定 */
+        :root {
+            --primary-color: #0b3c95; /* 採用您店舖招牌的藍色調 */
+            --secondary-color: #1a1a1a;
+            --light-color: #f8f9fa;
+            --text-color: #333333;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Helvetica Neue', Helvetica, Arial, 'Microsoft JhengHei', sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: #ffffff;
+        }
+
+        /* 導航欄 */
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1rem 5%;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        .logo h1 {
+            font-size: 1.5rem;
+            letter-spacing: 1px;
+        }
+        .logo p {
+            font-size: 0.8rem;
+            opacity: 0.8;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: opacity 0.3s;
+        }
+
+        nav ul li a:hover {
+            opacity: 0.7;
+        }
+
+        /* 主視覺區域 */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://unsplash.com') no-repeat center center/cover;
+            height: 60vh;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+            margin-top: 70px;
+        }
+
+        .hero h2 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+        }
+
+        /* 區塊通用樣式 */
+        section {
+            padding: 5rem 10%;
+            text-align: center;
+        }
+
+        section h3 {
+            font-size: 2rem;
+            margin-bottom: 30px;
+            color: var(--primary-color);
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        section h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 3px;
+            background-color: var(--primary-color);
+        }
+
+        /* 關於我們 */
+        .about p {
+            max-width: 800px;
+            margin: 0 auto 20px;
+            font-size: 1.1rem;
+            text-align: justify;
+        }
+
+        /* 產品分類展示 */
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .product-card {
+            background: var(--light-color);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+            padding: 20px;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .product-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+
+        /* 聯絡我們與店舖資料 */
+        .contact-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            text-align: left;
+        }
+
+        .info-box p {
+            margin-bottom: 15px;
+            font-size: 1.05rem;
+        }
+
+        .info-box strong {
+            color: var(--primary-color);
+        }
+
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .contact-form button {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: bold;
+            width: 100%;
+        }
+
+        .contact-form button:hover {
+            background-color: #082d72;
+        }
+
+        /* 頁尾與商業登記聲明 */
+        footer {
+            background-color: var(--secondary-color);
+            color: #999;
+            padding: 2rem 5%;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        .br-notice {
+            margin-top: 15px;
+            font-size: 0.8rem;
+            border-top: 1px solid #333;
+            padding-top: 15px;
+        }
+
+        /* 響應式斷點 */
+        @media (max-width: 768px) {
+            header { flex-direction: column; padding: 1rem; }
+            nav ul { margin-top: 10px; }
+            .hero h2 { font-size: 1.8rem; }
+            section { padding: 3rem 5%; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 導航欄 -->
+    <header>
+        <div class="logo">
+            <h1>利峰數碼有限公司</h1>
+            <p>LIFENG DIGITAL LIMITED</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#about">關於我們</a></li>
+                <li><a href="#products">產品分類</a></li>
+                <li><a href="#contact">聯絡店舖</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- 主視覺區域 -->
+    <div class="hero">
+        <h2>捕捉瞬間 傳承經典</h2>
+        <p>為攝影愛好者及專業攝影師提供最優質的數碼相機、二手老相機、珍藏級鏡頭及周邊配件。</p>
+    </div>
+
+    <!-- 關於我們 -->
+    <section id="about" class="about">
+        <h3>關於我們</h3>
+        <p>
+            利峰數碼有限公司（LIFENG DIGITAL LIMITED）根植於香港核心數碼商圈旺角皆旺商場。我們擁有多年的光學鏡頭及攝影器材零售經驗，店內陳列豐富的二手珍藏相機、復古手動鏡頭以及最新數碼影像設備，致力於為每一位走進店鋪的攝影同好提供最專業的器材諮詢與交流平台。
+        </p>
+    </section>
+
+    <!-- 產品分類 -->
+    <section id="products" style="background-color: var(--light-color);">
+        <h3>我們的產品線</h3>
+        <div class="products-grid">
+            <div class="product-card">
+                <div class="product-icon">📷</div>
+                <h4>經典相機機身</h4>
+                <p>涵蓋復古菲林相機、經典旁軸相機以及現代專業級數碼單反/無反機身。</p>
+            </div>
+            <div class="product-card">
+                <div class="product-icon">🔍</div>
+                <h4>光學鏡頭群</h4>
+                <p>提供各大品牌原廠鏡頭、經典老鏡頭及大光圈定焦鏡，滿足不同創作需求。</p>
+            </div>
+            <div class="product-card">
+                <div class="product-icon">🎒</div>
+                <h4>攝影周邊與清潔</h4>
+                <p>備有專業清潔套裝（如 GREEN CLEAN）、高能電池、濾鏡及防潮收納設備。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 聯絡我們 -->
+    <section id="contact">
+        <h3>聯絡我們</h3>
+        <div class="contact-container">
+            <!-- 店舖資料 -->
+            <div class="info-box">
+                <h4>利峰數碼門市資料</h4>
+                <br>
+                <p><strong>📍 門市地址：</strong><br>香港九龍旺角西洋菜南街1N號皆旺商場2樓214號鋪<br>(RM 214, 2/F, CTMA CENTRE, 1N SAI YEUNG CHOI ST SOUTH, MONG KOK, KOWLOON, HONG KONG)</p>
+                <p><strong>🏢 公司法定名稱：</strong><br>利峰數碼有限公司 (LIFENG DIGITAL LIMITED)</p>
+                <p><strong>💼 業務性質：</strong><br>CORP / BODY CORPORATE</p>
+            </div>
+            <!-- 聯絡表單 -->
+            <div class="contact-form">
+                <h4>在線留言詢價</h4>
+                <br>
+                <form id="enquiryForm">
+                    <input type="text" placeholder="您的姓名" required>
+                    <input type="email" placeholder="您的電郵地址" required>
+                    <input type="text" placeholder="欲尋找的相機/鏡頭型號" required>
+                    <textarea rows="4" placeholder="請輸入您的查詢內容..." required></textarea>
+                    <button type="submit">提交查詢</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- 頁尾 -->
+    <footer>
+        <p>&copy; 2026 利峰數碼有限公司 LIFENG DIGITAL LIMITED. 版權所有。</p>
+        <div class="br-notice">
+            <p>根據香港《商業登記條例》規定聲明：本公司已依法辦理商業登記。商業登記證號碼：80457766-000</p>
+        </div>
+    </footer>
+
+    <script>
+        // 簡單的表單提交互動
+        document.getElementById('enquiryForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('感謝您的查詢！我們會盡快回覆您關於相機器材的報價。');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
